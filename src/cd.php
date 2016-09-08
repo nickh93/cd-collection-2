@@ -40,5 +40,8 @@ class CD
     function getImage(){
         return $this->image;
     }
+    function getAll(){
+        return $_SESSION['list_of_cds'];
+    }
 }
 ?>

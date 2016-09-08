@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="/js/bootstrap.min.js"></script>
+    <title>CD Collection</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CD Collection</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <p>Fill out this form to add your favorite CDs and save them!</p>
+          <form action="/" method="post">
+            <div class="form-group">
+              <label for="band">Band Name:</label>
+              <input id="band" name="band" type="text" placeholder="Band name goes here....">
+            </div>
+            <div class="form-group">
+              <label for="album">Album Name:</label>
+              <input id="album" name="album" type="text" placeholder="Album name goes here....">
+            </div>
+            <div class="form-group">
+              <label for="year">Release Year:</label>
+              <input id="year" name="year" type="number" placeholder="Release date goes here....">
+            </div>
+            <div class="form-group">
+              <label for="image">Image URL:</label>
+              <input id="image" name="image" type="text" placeholder="Album Image URL goes here....">
+            </div>
+
+            <button type="submit" class="btn-success btn-lg">Add a CD!</button>
+          </form>
+        </div>
+        <div class="col-xs-6">
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
