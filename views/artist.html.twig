@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="/js/bootstrap.min.js"></script>
+    <title>Artist Search</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Artist Search</h1>
+      <p>Search your cds for a particular artist:</p>
+      {% if cds is not empty %}
+        <form action="/artist" method="post">
+          <label for="artist">Please select the artist whose albums you would like to see:</label>
+          <select class="form-control">
+
+          </select>
+        </form>
+      {% else %}
+        <h3>Hey! You need to <a href='/'>enter some cds</a> to search!</h3>
+      {% endif %}
+    </div>
+  </body>
+</html>

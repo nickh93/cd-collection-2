@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <script src="/js/bootstrap.min.js"></script>
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <!-- <script src="/js/bootstrap.min.js"></script> -->
     <title>CD Collection</title>
   </head>
   <body>
@@ -30,7 +31,10 @@
               <input id="image" name="image" type="text" placeholder="Album Image URL goes here....">
             </div>
 
-            <button type="submit" class="btn-success btn-lg">Add a CD!</button>
+            <button type="submit" name="form-submit" class="btn-success btn-lg">Add a CD!</button>
+          </form>
+          <form action="/" method="post">
+            <button type="submit" name="form-delete">Delete Collection</button>
           </form>
         </div>
         <div class="col-xs-6">

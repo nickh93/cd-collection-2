@@ -49,5 +49,9 @@ class CD {
         return $_SESSION['list_of_cds'];
     }
 
+    static function deleteAll(){
+        $_SESSION['list_of_cds'] = array();
+    }
+
 }
 ?>
