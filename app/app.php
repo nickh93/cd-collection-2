@@ -17,8 +17,15 @@
     ));
 
     $app->get('/', function() use ($app) {
-        return
-        $app['twig']->render('home.html.twig', array('CDs' => CD::getAll()));
+      return
+      $app['twig']->render('home.html.twig', array('cds' => CD::getAll()));
     });
+
+    $app->post('/', function() use ($app){
+      $cd = new CD($_POST['band'], $_POST['album'], $_POST['year'], $_POST['image']);
+      $cd->save();
+      return $app['twig']->render('home.html.twig', array('cds' => CD::getAll()));
+    });
+
     return $app;
 ?>

@@ -1,6 +1,6 @@
 <?php
-class CD
-{
+class CD {
+
     private $band;
     private $album;
     private $year;
@@ -40,8 +40,14 @@ class CD
     function getImage(){
         return $this->image;
     }
-    function getAll(){
+
+    function save(){
+      array_push($_SESSION['list_of_cds'], $this);
+    }
+
+    static function getAll(){
         return $_SESSION['list_of_cds'];
     }
+
 }
 ?>

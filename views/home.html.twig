@@ -34,9 +34,17 @@
           </form>
         </div>
         <div class="col-xs-6">
+          {% if cds is not empty %}
+            <p>These are your entered cds:</p>
+            <ul>
+              {% for cd in cds %}
+                <li>{{ cd.getAlbum }}({{ cd.getYear }}) by {{ cd.getBand }}</li>
+                <li><img src= {{ cd.getImage }}></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
       </div>
-
     </div>
   </body>
 </html>
